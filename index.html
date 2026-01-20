@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Riddhima Urankar | Software & ML Engineer</title>
+
+  <!-- Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-inner">
+    <span class="logo">Riddhima Urankar</span>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+      Software Engineer<br/>
+      <span>& Applied ML Engineer</span>
+    </h1>
+
+    <p>
+      I build scalable backend systems, ML pipelines, and LLM-powered applications
+      with a strong focus on correctness, performance, and clean architecture.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://github.com/Riddhima8" target="_blank" class="btn-primary">GitHub</a>
+      <a href="https://linkedin.com/in/riddhima-urankar" target="_blank" class="btn-secondary">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <h2>About Me</h2>
+  <p class="section-text">
+    I am a Computer Engineering undergraduate (Honors in AI & ML) with a strong engineering mindset
+    and hands-on experience building backend systems, machine learning pipelines, and LLM-powered applications.
+    <br/><br/>
+    My work focuses on designing clean architectures, writing reliable and scalable code, and taking ideas
+    from experimentation to production-ready systems. I have built RESTful backends using Spring Boot,
+    end-to-end ML pipelines with proper evaluation, and retrieval-augmented generation systems that combine
+    semantic search with large language models.
+    <br/><br/>
+    I enjoy working at the intersection of software engineering and applied machine learning — where
+    system design, performance, and real-world usability matter as much as model accuracy.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal light">
+  <h2>Technical Skills</h2>
+
+  <div class="skills-block">
+    <h3>Programming & Computer Science</h3>
+    <p>Python, Java, Data Structures & Algorithms, Object-Oriented Programming, Complexity Analysis</p>
+  </div>
+
+  <div class="skills-block">
+    <h3>Backend & Systems</h3>
+    <p>Spring Boot, REST APIs, JPA, MySQL, API Design, Input Validation, Exception Handling</p>
+  </div>
+
+  <div class="skills-block">
+    <h3>Machine Learning</h3>
+    <p>Scikit-learn, PyTorch, TensorFlow, Model Training, Evaluation Metrics, Hyperparameter Tuning</p>
+  </div>
+
+  <div class="skills-block">
+    <h3>NLP & LLM Systems</h3>
+    <p>HuggingFace, Transformers, LoRA, LangChain, RAG, Embeddings, FAISS</p>
+  </div>
+
+  <div class="skills-block">
+    <h3>Tools & Platforms</h3>
+    <p>Git, Docker (basic), Streamlit, Firebase, Pandas, NumPy, Postman</p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <h3>Research Analyst Chatbot</h3>
+    <p>LLM-powered research assistant for document analysis.</p>
+    <button class="project-btn" onclick="openProject('research')">Click to view details →</button>
+  </div>
+
+  <div class="project-card">
+    <h3>GO SAFE – Safety Aware Routing</h3>
+    <p>Risk-aware navigation system prioritizing safer routes.</p>
+    <button class="project-btn" onclick="openProject('gosafe')">Click to view details →</button>
+  </div>
+
+  <div class="project-card">
+    <h3>Legal Document Summarizer</h3>
+    <p>LLM fine-tuning for legal document summarization.</p>
+    <button class="project-btn" onclick="openProject('legal')">Click to view details →</button>
+  </div>
+
+  <div class="project-card">
+    <h3>Laptop Price Predictor</h3>
+    <p>End-to-end ML regression pipeline.</p>
+    <button class="project-btn" onclick="openProject('laptop')">Click to view details →</button>
+  </div>
+
+  <div class="project-card">
+    <h3>zeroQ</h3>
+    <p>Smart queue and crowd management system.</p>
+    <button class="project-btn" onclick="openProject('zeroq')">Click to view details →</button>
+  </div>
+
+  <div class="project-card">
+    <h3>Rubric Analysis System</h3>
+    <p>Automated rubric-based evaluation platform.</p>
+    <button class="project-btn" onclick="openProject('rubric')">Click to view details →</button>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section reveal light">
+  <h2>Certifications</h2>
+  <ul class="cert-list">
+    <li>Supervised Machine Learning — DeepLearning.AI (Stanford)</li>
+    <li>Advanced Learning Algorithms — DeepLearning.AI (Stanford)</li>
+    <li>Unsupervised Learning, Recommenders & RL — DeepLearning.AI</li>
+    <li>Full-Stack Web Development — Microsoft</li>
+    <li>Python Programming — PICT</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <h2>Contact</h2>
+  <p>Email: riddhima8214@gmail.com</p>
+  <p>Pune, India</p>
+</section>
+
+<footer>
+  © 2026 Riddhima Urankar
+</footer>
+
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+    <ul id="modalPoints"></ul>
+    <a id="modalLink" class="btn-primary" target="_blank">View on GitHub</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
