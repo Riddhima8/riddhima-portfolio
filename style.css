@@ -1,0 +1,289 @@
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0b0d10;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(11, 13, 16, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #cbd5f5;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #9affd8;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  min-height: 100vh;
+  padding-top: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top, #1f1b4e, transparent 55%),
+    #0b0d10;
+}
+
+.hero-content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 3.8rem);
+  font-weight: 800;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #7f7cff, #9affd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 1.4rem;
+  color: #b6b9d6;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.hero-actions {
+  margin-top: 3rem;
+}
+
+.btn-primary,
+.project-btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border-radius: 32px;
+  background: linear-gradient(90deg, #7f7cff, #9affd8);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  padding: 0.9rem 2.2rem;
+  border-radius: 32px;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #e5e7eb;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 8rem 2rem;
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3.5rem;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills-block {
+  margin-bottom: 3rem;
+}
+
+.skills-block h3 {
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #eaeaff;
+}
+
+/* =========================
+   PROJECT CARDS
+========================= */
+.project-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2.4rem;
+  border-radius: 22px;
+  margin-bottom: 3.5rem;
+}
+
+.project-card p {
+  color: #bdbfe5;
+}
+
+.project-btn {
+  margin-top: 1.8rem;
+}
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+.cert-list li {
+  margin-bottom: 1.2rem;
+}
+
+/* =========================
+   MODAL OVERLAY
+========================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* =========================
+   MODAL CONTENT (FIXED)
+========================= */
+.modal-content {
+  width: min(960px, 94vw);
+  max-height: 85vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  background: linear-gradient(135deg, #1f1b4e, #0b0d10);
+  color: #e5e7eb;
+
+  padding: 3.8rem;
+  border-radius: 34px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  box-shadow: 0 50px 120px rgba(0,0,0,0.7);
+}
+
+/* Modal title */
+.modal-content h3 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #7f7cff, #9affd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Modal text */
+.modal-content p {
+  color: #cfd2ff;
+}
+
+/* Bullet list */
+.modal-content ul {
+  padding-left: 1.4rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.8rem;
+  color: #bdbfe5;
+}
+
+/* GitHub button — NO OVERLAP */
+.modal-content .btn-primary {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 26px;
+  right: 32px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #c7c7ff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 3rem;
+  color: #8b8fc7;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 2.5rem;
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+}
