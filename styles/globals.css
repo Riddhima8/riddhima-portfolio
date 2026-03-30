@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts - Inter for modern professional tech feel */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #050510;
+  --accent: #818cf8;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base size */
+}
+
+body {
+  @apply bg-midnight text-gray-300 text-lg; /* Increased font size slightly */
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* Professional dark gradient background with subtle animation */
+body {
+  background: 
+    radial-gradient(ellipse at top left, rgba(129, 140, 248, 0.1), transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(167, 139, 250, 0.08), transparent 60%),
+    linear-gradient(to right, #050510, #0a0a1a, #050510);
+  background-size: 200% 200%;
+  animation: gradient-x 15s ease infinite;
+  background-attachment: fixed;
+}
+
+/* Section container */
+.section {
+  @apply max-w-6xl mx-auto px-6 sm:px-8 lg:px-10;
+}
+
+/* Clear, recruiter friendly headings */
+.headline {
+  @apply text-4xl sm:text-5xl font-bold tracking-tight mb-8 text-gray-50 drop-shadow-md;
+}
+
+.headline span {
+  @apply text-accent;
+}
+
+/* Card base - sleek borders, hover lift */
+.card {
+  @apply bg-slate-900/40 border border-slate-700/50 rounded-xl backdrop-blur-md transition-all duration-300 hover:border-accent/40 hover:bg-slate-800/80 hover:-translate-y-2;
+}
+
+/* AOS overrides */
+[data-aos] {
+  will-change: transform, opacity;
+}
+
+/* Navbar blur */
+.nav-blur {
+  @apply bg-midnight/90 backdrop-blur-md border-b border-white/5;
+}
+
+/* Typing caret color */
+.typed-caret {
+  border-right: 2px solid var(--accent);
+}
+
+/* Sleek subtle hover */
+.btn-glow {
+  @apply transition-all shadow-md;
+}
+
+.btn-glow:hover {
+  @apply shadow-glow bg-accent text-white;
+}
+
+/* Remove default link outlines if clicked */
+a:focus {
+  outline: none;
+}
